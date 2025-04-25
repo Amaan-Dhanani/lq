@@ -1,0 +1,188 @@
+.button.x {
+  max-width: 320px;
+  display: flex;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-family: 'Varela Round';
+  margin-left: auto;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  gap: 0.75rem;
+  color: #ffffff;
+  background-color: #007bff;
+  transition: all 0.6s ease;
+}
+
+  .radio-input {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .radio-input * {
+    box-sizing: border-box !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .radio-input label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    padding: 0px 10px !important;
+    width: 220px !important;
+    cursor: pointer !important;
+    height: 50px !important;
+    position: relative !important;
+  }
+
+  .radio-input label::before {
+    position: absolute !important;
+    content: "" !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 220px !important;
+    height: 45px !important;
+    z-index: -1 !important;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+    border-radius: 10px !important;
+    border: 2px solid transparent !important;
+  }
+
+  .radio-input label:hover::before {
+    transition: all 0.2s ease !important;
+    background-color: #2a2e3c !important;
+  }
+
+  .radio-input .label:has(input:checked)::before {
+    height: 50px !important;
+  }
+
+  .radio-input .label .text {
+    color: #fff !important;
+  }
+
+  .radio-input .label input[type="radio"] {
+    background-color: #202030 !important;
+    appearance: none !important;
+    width: 17px !important;
+    height: 17px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .radio-input .label input[type="radio"]:checked {
+    background-color: #435dd8 !important;
+    -webkit-animation: puls 0.7s forwards !important;
+    animation: pulse 0.7s forwards !important;
+  }
+
+  .radio-input .label input[type="radio"]:before {
+    content: "" !important;
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50% !important;
+    transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    background-color: #fff !important;
+    transform: scale(0) !important;
+  }
+
+  .radio-input .label input[type="radio"]:checked::before {
+    transform: scale(1) !important;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4) !important;
+    }
+    70% {
+      box-shadow: 0 0 0 8px rgba(255, 255, 255, 0) !important;
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0) !important;
+    }
+  }
+
+@-moz-keyframes wave-4 {
+  50% {
+    transform: scale(0.9) !important;
+  }
+}
+
+@-webkit-keyframes wave-4 {
+  50% {
+    transform: scale(0.9) !important;
+  }
+}
+
+@-o-keyframes wave-4 {
+  50% {
+    transform: scale(0.9) !important;
+  }
+}
+
+@keyframes wave-4 {
+  50% {
+    transform: scale(0.9) !important;
+  }
+}
+
+h2 {
+  font-size: 20px;
+}
+
+textarea {
+  visibility: hidden;
+}
+
+
+.ingrp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3), 4px 7px 15px rgba(0, 0, 0, 0.2),
+    9px 15px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+#question-btn,
+input {
+  outline: none;
+  border: none;
+  padding: 16px !important;
+  font-size: 18px;
+}
+
+#question {
+  text-align: center;
+}
+
+#question-btn {
+  cursor: pointer;
+}
+
+#question-btn:nth-child(4) {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#question-btn:nth-child(1) {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+#question-btn:hover {
+  background-color: #e6e6e6;
+}
+
+#question-btn:active {
+  box-shadow: inset 4px 5px 10px rgba(0, 0, 0, 0.5);
+}

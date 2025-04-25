@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Varela+Round&display=swap');
+.x {
+    border-radius: 5px;
+    margin-top: 0px;
+    padding: 4px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #0000ff4d;
+    cursor: text !important;
+  }
+
+  body {
+    background: #131317;
+  }
+
+
+  .card-title {
+    color: rgba(33, 37, 41, 0.75);
+    padding: 1rem;
+    padding-bottom: 0px;
+    font-family: 'Rubik';
+  }
+
+  .card-body {
+    padding: 0 !important;
+  }
+
+  .card-text {
+    border-top: 1px solid rgba(0, 0, 0, 0.176);
+    background: rgba(13,110,253, 0.2);
+    padding: 1rem;
+    padding-top: 0px;
+    color: black;
+
+  }
+
+  .pagination {
+    justify-content: center;
+  }
+
+  .pagination:hover {
+    justify-content: center;
+  }
+
+  .y {
+    cursor: default !important;
+    border: none;
+    background: transparent;
+  }
+
+img {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50%;
+}
+
+.btn {
+  line-height: 1.25;
+}
+
+.submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10px;
+}
