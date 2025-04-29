@@ -5,6 +5,9 @@ export type tInputProps = HTMLInputAttributes & {
 
     // --- Default Classes:
     inputClass?: ClassValue,
+    labelClass?: ClassValue,
+
+    classLabel?: ClassValue
     
     // Extra Props Here:
     label?: string,
