@@ -6,7 +6,7 @@
 </script>
 
 
-<main>
+<main class="size-full">
 	<slot />
 </main>
 
