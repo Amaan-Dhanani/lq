@@ -3,8 +3,8 @@
   import Nav from '$lib/components/Nav.svelte';
   import RemoveGlobalComponent from '$lib/components/RemoveGlobalComponent.svelte';
   import { onMount } from 'svelte';
+  import Theme from '@lib/components/Theme.svelte';
 </script>
-
 
 <main class="size-full">
 	<slot />
