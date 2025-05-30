@@ -7,7 +7,7 @@
 </script>
 
 <!-- Full screen container -->
-<div class="flex flex-col min-h-screen bg-[#F0F0F2]  dark:bg-[#1F1F39]">
+<div class="flex flex-col min-h-screen bg-[#F0F0F2] dark:bg-[#1F1F39]">
 	<!-- Decorative background element -->
 	<div class="absolute inset-0 -z-[100] w-full bg-[#F0F0F2]"></div>
 

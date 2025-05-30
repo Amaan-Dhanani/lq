@@ -3,11 +3,13 @@
   import Nav from '$lib/components/Nav.svelte';
   import RemoveGlobalComponent from '$lib/components/RemoveGlobalComponent.svelte';
   import { onMount } from 'svelte';
+  import Speedial from '@lib/components/darklight/speedial.svelte';
 </script>
 
 
 <main class="size-full">
 	<slot />
+	<Speedial/>
 </main>
 
 <style>
