@@ -42,7 +42,7 @@
 
 		<!-- Login Link -->
 		<p class="text-center text-[#858597] text-[14px]">
-			Don't have an account? <a class="text-[#3D5CFF] font-bold underline" href="/login">Sign up</a>
+			Don't have an account? <a class="text-[#3D5CFF] font-bold underline" href="/register">Sign up</a>
 		</p>
 
 
