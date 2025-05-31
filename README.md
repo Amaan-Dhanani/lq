@@ -19,8 +19,19 @@ with **`bun`**
 ```bash
 npm run dev
 
-# if bun is install
+# if bun is installed
 bun run dev
+```
+
+
+## Host on other devices
+**(SIMPLE TEST - use this mostly)**
+
+```bash
+npm run dev -- --host
+
+# if bun is installed
+bun run dev -- --host
 ```
 
 ## Build 
