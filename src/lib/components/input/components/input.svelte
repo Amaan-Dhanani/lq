@@ -9,7 +9,7 @@
         class: className,
         
         // --- Default Classes 
-        inputClass = $bindable('border-[1px] border-[#e0e0e2] rounded-3 px-3 py-4 w-full text-[14px] w-full rounded-[12px] px-4 py-3'),
+        inputClass = $bindable('dark:bg-[#3E3E55] dark:text-white dark:border-[0px] border-[1px] border-[#e0e0e2] rounded-3 px-3 py-4 w-full text-[14px] w-full rounded-[12px] px-4 py-3'),
         labelClass = $bindable('text-[#858597] text-[14px]'),
 
         // --- User Defined Classes

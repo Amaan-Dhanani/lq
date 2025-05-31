@@ -7,12 +7,11 @@
 </script>
 
 <!-- Full screen container -->
+<div class="fixed inset-0 -z-[100] overflow-hidden w-screen h-[300vh] bg-[#F0F0F2] dark:bg-[#1F1F39] mt-[100vh]"></div>
 <div class="flex flex-col min-h-screen bg-[#F0F0F2] dark:bg-[#1F1F39]">
-	<!-- Decorative background element -->
-	<div class="absolute inset-0 -z-[100] w-full bg-[#F0F0F2]"></div>
 
 	<!-- Header -->
-	<h1 class="text-[32px] pt-[86px] font-bold ml-[5px] mb-0">Sign Up</h1>
+	<h1 class="text-[32px] pt-[86px] font-bold ml-[5px] mb-0 dark:text-white">Sign Up</h1>
 	<p class="mt-0 ml-[5px] mb-[10px] text-[12px] text-[#B8B8D2]">
 		Enter your details below to start your journey!
 	</p>
@@ -22,7 +21,7 @@
 		method="POST"
 		autocomplete="off"
 		use:enhance
-		class="flex flex-col flex-grow rounded-t-2xl py-8 border-[#ccc] border-[1px] border-b-[0px] px-6 box-border gap-4 bg-white"
+		class="flex flex-col flex-grow rounded-t-2xl py-8 px-6 box-border gap-4 bg-white dark:bg-[#2F2F42]"
 	>
 		<div>
 			<Input type="email" id="email_input" name="email" label="Your Email" value={form?.user?.email ?? ''} />
@@ -40,7 +39,7 @@
 		</button>
 
 		<!-- Login Link -->
-		<p class="text-center text-[#858597] text-[14px] bg-white">
+		<p class="text-center text-[#858597] text-[14px]">
 			Already have an account? <a class="text-[#3D5CFF] font-bold underline" href="/login">Log in</a>
 		</p>
 
