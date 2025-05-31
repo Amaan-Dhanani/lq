@@ -23,7 +23,7 @@
 			body.classList.remove("bg-[#F0F0F2]", "dark:bg-[#1F1F39]");
 
 			// Apply background color to the body
-			if (pageName === "/register") {
+			if (pageName === "/register" || pageName === "/login") {
 				body.classList.add("bg-[#F0F0F2]", "dark:bg-[#1F1F39]");
 			}
 		});
