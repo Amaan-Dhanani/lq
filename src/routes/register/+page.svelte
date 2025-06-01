@@ -12,7 +12,7 @@
 ></div>
 <div class="flex min-h-screen flex-col bg-[#F0F0F2] dark:bg-[#1F1F39]">
 	<!-- Header -->
-	<h1 class="mb-0 ml-[5px] pt-[86px] text-[32px] font-bold dark:text-white">Sign Up</h1>
+	<h1 class="mb-0 ml-[5px] pt-[86px] text-[32px] font-bold dark:text-white">Get Started</h1>
 	<p class="mt-0 mb-[10px] ml-[5px] text-[12px] text-[#B8B8D2]">
 		Enter your details below to start your journey!
 	</p>
@@ -31,7 +31,7 @@
 				name="name"
 				label="Name"
 				value={form?.user?.name ?? ''}
-				class="mb-[12px]"
+				class=""
 			/>
 		</div>
 		<div>
@@ -44,22 +44,22 @@
 			/>
 		</div>
 		<div>
-			<Input type="password" id="password_input" label="Password" name="password" />
+			<Input type="password" class="mb-[12px]" id="password_input" label="Password" name="password" />
 		</div>
 
 		<!-- Submit Button -->
 		<button
-			class="font-poppins h-12 w-full rounded-xl bg-[#3d5cff] text-center text-white hover:cursor-pointer"
+			class="h-12 w-full rounded-xl bg-[#3d5cff] text-center text-white hover:cursor-pointer"
 		>
 			Register
 		</button>
 
-		<!-- Login Link -->
+		<!-- Sign In Link -->
 		<p class="text-center text-[14px] text-[#858597]">
-			Already have an account? <a class="font-bold text-[#3D5CFF] underline" href="/login">Log in</a
+			Already have an account? <a class="font-bold text-[#3D5CFF] underline" href="/login">Sign In</a
 			>
 		</p>
-		<div class="flex flex-col text-center justify-center items-center">
+		<div class="mt-10 flex flex-col text-center justify-center items-center">
 			<!-- Optional messages -->
 			{#if form?.message}
 				<div
@@ -83,7 +83,7 @@
 						</svg>
 						<span class="sr-only">Check icon</span>
 					</div>
-					<div class="font-poppins ms-3 text-sm">{form.message}</div>
+					<div class="ms-3 text-sm">{form.message}</div>
 				</div>
 			{/if}
 			{#if form?.error}
@@ -108,7 +108,7 @@
 						</svg>
 						<span class="sr-only">Error icon</span>
 					</div>
-					<div class="ms-3 text-sm font-normal">{form.error}</div>
+					<div class="ms-3 text-sm">{form.error}</div>
 				</div>
 			{/if}
 		</div>

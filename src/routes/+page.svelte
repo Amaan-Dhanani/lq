@@ -11,7 +11,7 @@
 <div class="flex flex-col min-h-screen bg-[#F0F0F2] dark:bg-[#1F1F39]">
 
 	<!-- Header -->
-	<h1 class="text-[32px] pt-[86px] font-bold ml-[5px] mb-0 dark:text-white">Login</h1>
+	<h1 class="text-[32px] pt-[86px] font-bold ml-[5px] mb-0 dark:text-white">Sign In</h1>
 	<p class="mt-0 ml-[5px] mb-[10px] text-[12px] text-[#B8B8D2]">
 		Welcome back to LearnQuest!
 	</p>
@@ -31,18 +31,18 @@
 			value={form?.email ?? ""} />
 		</div>
 		<div>
-			<Input type="password" id="password_input" label="Password" name="password" />
+			<Input type="password" class="mb-[12px]" id="password_input" label="Password" name="password" />
 		</div>
 		
 
 		<!-- Submit Button -->
-		<button class="font-poppins h-12 w-full rounded-xl bg-[#3d5cff] text-center text-white hover:cursor-pointer">
-			Login
+		<button class="h-12 w-full rounded-xl bg-[#3d5cff] text-center text-white hover:cursor-pointer">
+			Sign In
 		</button>
 
-		<!-- Login Link -->
+		<!-- Sign In Link -->
 		<p class="text-center text-[#858597] text-[14px]">
-			Don't have an account? <a class="text-[#3D5CFF] font-bold underline" href="/login">Sign up</a>
+			Don't have an account? <a class="text-[#3D5CFF] font-bold underline" href="/login">Get Started</a>
 		</p>
 
 
