@@ -8,7 +8,7 @@
 
 <!-- Full screen container -->
 <div class="fixed inset-0 -z-[100] overflow-hidden w-screen h-[300vh] bg-[#F0F0F2] dark:bg-[#1F1F39] mt-[100vh]"></div>
-<div class="flex flex-col min-h-screen bg-[#F0F0F2] dark:bg-[#1F1F39]">
+<div class="flex flex-col min-h-screen bg-[#F0F0F2] dark:bg-[#1F1F39] ml-[1rem] mr-[1rem]">
 
 	<!-- Header -->
 	<h1 class="text-[32px] pt-[86px] font-bold ml-[5px] mb-0 dark:text-white">Sign In</h1>

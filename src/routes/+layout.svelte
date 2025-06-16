@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Nav from '$lib/components/Nav.svelte';
-	import RemoveGlobalComponent from '$lib/components/RemoveGlobalComponent.svelte';
 	import { onMount } from 'svelte';
 	import Speedial from '@lib/components/darklight/speedial.svelte';
 	import { global_mode$ } from '$lib/components/darklight/mode';
@@ -41,6 +39,5 @@
 	main {
 		max-width: 30rem;
 		margin-inline: auto;
-		padding-inline: 1rem;
 	}
 </style>

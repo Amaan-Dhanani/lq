@@ -10,7 +10,7 @@
 <div
 	class="fixed inset-0 -z-[100] mt-[100vh] h-[300vh] w-screen overflow-hidden bg-[#F0F0F2] dark:bg-[#1F1F39]"
 ></div>
-<div class="flex min-h-screen flex-col bg-[#F0F0F2] dark:bg-[#1F1F39]">
+<div class="flex min-h-screen flex-col bg-[#F0F0F2] dark:bg-[#1F1F39] ml-[1rem] mr-[1rem]">
 	<!-- Header -->
 	<h1 class="mb-0 ml-[5px] pt-[86px] text-[32px] font-bold dark:text-white">Get Started</h1>
 	<p class="mt-0 mb-[10px] ml-[5px] text-[12px] text-[#B8B8D2]">
