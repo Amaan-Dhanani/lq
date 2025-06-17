@@ -3,9 +3,10 @@ import type { Actions } from "./$types";
 
 export const actions: Actions = {
 	default: async (event) => {
-		event.cookies.delete("auth-token");
-		event.cookies.delete("email");
-		event.cookies.delete("name");
+		const cookieOptions = { path: '/' }; // Ensure cookies are removed from root path
+		event.cookies.delete("auth-token", cookieOptions);
+		event.cookies.delete("email", cookieOptions);
+		event.cookies.delete("name", cookieOptions);
 		throw redirect(301, "/");
 	}
 };

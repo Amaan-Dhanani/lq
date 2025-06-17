@@ -2,6 +2,7 @@
 	import '$lib/css/app.css';
 	import type { PageData } from "./$types";
 	import Logo from "$lib/images/LearnQuest_logo.png";
+	import Navigation from '@lib/components/navigation/Navigation.svelte';
 	function Account() {
 		location.replace("/account");
 	}
@@ -97,3 +98,4 @@
 		background-color: #fbdf71;
 	}
 </style>
+<Navigation/>

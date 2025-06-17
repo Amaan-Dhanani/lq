@@ -21,7 +21,7 @@
 			body.classList.remove("bg-[#F0F0F2]", "dark:bg-[#1F1F39]");
 
 			// Apply background color to the body
-			if (pageName === "/register" || pageName === "/login") {
+			if (pageName === "/register" || pageName === "/login" || pageName === "/account") {
 				body.classList.add("bg-[#F0F0F2]", "dark:bg-[#1F1F39]");
 			}
 		});
