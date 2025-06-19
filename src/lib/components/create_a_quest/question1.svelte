@@ -72,8 +72,8 @@
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Description (optional)</h2>
 			<Textarea
-				id="answerchoiced_1"
-				name="answerchoiced_1"
+				id="description_1"
+				name="description_1"
 				cap={1850}
 				rows="3"
 				placeholder="Optionally explain the reasoning behind the correct answer or provide extra context. Max length - 1850 chars."

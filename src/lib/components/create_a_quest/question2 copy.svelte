@@ -28,11 +28,11 @@
 		use:enhance
 		class="box-border flex flex-grow flex-col rounded-t-2xl bg-white px-6 py-8 dark:bg-[#2F2F42]"
 	>
-		<h1 class="mb-[5px] text-center text-[18px] dark:text-white mb-4">Question 2</h1>
+		<h1 class="mb-[5px] text-center text-[18px] dark:text-white mb-4">Question 3</h1>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Question</h2>
 			<Textarea
-				id="question_2"
-				name="question_2"
+				id="question_3"
+				name="question_3"
 				required
 				cap={1850}
 				class="mb-[10px]"
@@ -40,40 +40,40 @@
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Answer Choice A</h2>
 			<Textarea
-				id="answerchoicea_2"
-				name="answerchoicea_2"
+				id="answerchoicea_3"
+				name="answerchoicea_3"
 				required
 				cap={1850}
 				placeholder="Enter Answer Choice A here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Answer Choice B</h2>
 			<Textarea
-				id="answerchoiceb_2"
-				name="answerchoiceb_2"
+				id="answerchoiceb_3"
+				name="answerchoiceb_3"
 				required
 				cap={1850}
 				placeholder="Enter Answer Choice B here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Answer Choice C</h2>
 			<Textarea
-				id="answerchoicec_2"
-				name="answerchoicec_2"
+				id="answerchoicec_3"
+				name="answerchoicec_3"
 				required
 				cap={1850}
 				placeholder="Enter Answer Choice C here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Answer Choice D</h2>
 			<Textarea
-				id="answerchoiced_2"
-				name="answerchoiced_2"
+				id="answerchoiced_3"
+				name="answerchoiced_3"
 				required
 				cap={1850}
 				placeholder="Enter Answer Choice D here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Description (optional)</h2>
 			<Textarea
-				id="description_2"
-				name="description_2"
+				id="description_3"
+				name="description_3"
 				cap={1850}
 				rows="3"
 				placeholder="Optionally explain the reasoning behind the correct answer or provide extra context. Max length - 1850 chars."
