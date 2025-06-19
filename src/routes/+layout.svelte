@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-	import Speedial from '@lib/components/darklight/speedial.svelte';
+	import { LightDark } from '@lib/components';
 	import { global_mode$ } from '$lib/components/darklight/mode';
 	import { type Writable } from 'svelte/store';
 
@@ -32,7 +32,7 @@
 
 <main class="size-full">
 	<slot />
-	<Speedial />
+	<LightDark/>
 </main>
 
 <style>

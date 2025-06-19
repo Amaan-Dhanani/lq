@@ -17,7 +17,6 @@
 	let text5 = 'Settings';
 	let link5 = "/account";
 </script>
-
 <div class="fixed left-0 right-0 bottom-0 z-10 w-full">
 	<div class="flex h-[118px] w-full flex-row items-end justify-around">
 		<div class="absolute -z-100 h-[95px] w-full rounded-t-[30px] bg-[#ccc] dark:bg-[#3E3E55]"></div>
