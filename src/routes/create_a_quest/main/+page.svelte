@@ -44,7 +44,7 @@
 		</div>
 		<div class="gap-0">
 			<h2 class="mt-[10px] mb-[5px] text-[16px] dark:text-white">Quest Title</h2>
-			<Input type="text" id="quest_title" name="quest_title" required value={form?.email ?? ''} />
+			<Input type="text" id="quest_title" name="quest_title" required />
 		</div>
 		<div class="gap-0">
 			<h2 class="mt-[5px] mb-[5px] text-[16px] dark:text-white">Access</h2>
