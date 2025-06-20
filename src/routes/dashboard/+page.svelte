@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import type { ActionData, PageData } from './$types';
+	import type { PageData } from './$types';
 	import '$lib/css/app.css';
 	import { Input } from '@lib/components';
-	export let form: ActionData;
 	export let data: PageData;
 	import Navigation from '@lib/components/navigation/Navigation.svelte';
 </script>

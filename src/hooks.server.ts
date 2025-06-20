@@ -5,7 +5,8 @@ import { cookie_options } from "$lib/server/utils";
 export const handle: Handle = async ({ event, resolve }) => {
 	const is_protected =
 		event.url.pathname.startsWith("/dashboard") ||
-		event.url.pathname.startsWith("/account");
+		event.url.pathname.startsWith("/account") ||
+		event.url.pathname.startsWith("/create_a_quest") ;
 
 	const auth = authenticate(event.cookies);
 

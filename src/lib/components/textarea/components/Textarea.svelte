@@ -1,5 +1,5 @@
 <script lang="ts"> 
-	import { cn } from '@lib/utils';
+	import { cn } from '@lib/components/utils';
 	import type { Props } from "..";
 
 	let {
@@ -13,7 +13,7 @@
 		// --- User Defined Classes
 		classLabel = $bindable(''),
 
-		// --- Input Props
+		// --- Textarea Props
 		label = $bindable(undefined),
 		cap = $bindable(undefined),
 
