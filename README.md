@@ -19,7 +19,7 @@
 > |-|-|-|
 > | `class` | Any other classes you want to add which will add on to the other classes that were used by default for styling. Overriding default classes work. | `ml-[45px]`
 > | `label` | Adds a `<label>` element above the input box. However, since the styling of this label cannot be customized, it's recommended to omit the `label` prop and instead use your own HTML text element if custom styling is needed. | `Name`|
-
+> 
 > Note that other HTML `input` attributes (such as `required` and `disabled`) are also props, and these props can override defaults.
 
 ### Navigation
@@ -57,6 +57,7 @@
 > |-|-|-|
 > | `class` | Any other classes you want to add which will add on to the other classes that were used by default for styling. Overriding default classes work. | `ml-[45px]`
 > | `cap` | Adds a cap to how many characters can be put, and will display the amounts of characters typed so far. the `maxlength` attribute is not recommended unless you want to add a cap without displaying the amount of characters.| `Name`|
+> 
 > Note that other HTML `textarea` attributes (such as `required` and `disabled`) are also props, and these props can override defaults.
 
 ## How to (server)
