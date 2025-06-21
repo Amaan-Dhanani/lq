@@ -13,6 +13,7 @@
 > | `label` | Adds a `<label>` element above the input box. However, since the styling of this label cannot be customized, it's recommended to omit the `label` prop and instead use your own HTML text element if custom styling is needed. | `Name`|
 > 
 > Note that other HTML `input` attributes (such as `required` and `disabled`) are also props, and these props can override defaults.
+> Note the component needs access to `$lib/components/utils.ts`.
 
 ### Navigation
 >Go to `$lib/components/navigation/Navigation.svelte` to find the navbar.  Each icon is made by the `Icon` component, which is found in `$lib/components/navigation/components/Icon.svelte`. The props of the Icon component are as follows:
@@ -42,7 +43,7 @@
 >- The `name` prop can be used to reference the element, which is necessary during an HTML form. When a form is submitted, the `name` is used as the key in the key-value pair sent to the server.
 > - `bind:selected` tells Svelte to keep the value of the selected option in sync with a variable.  In this case, `{selected2}` is the variable being bound. When the user selects a new option, `selected2` updates automatically. The string in `selected2` indicates the default value and is declared in the TypeScript portion of the Svelte page (not the component itself.
 > - The `options` array defines the choices shown in the dropdown menu. Each object in the array has a `label` and a `value`.   `label` is the text displayed to the user.   `value`: This is the underlying value assigned when the option is selected.
-> 
+> Note the component needs access to `$lib/components/utils.ts`.
 ### Textarea
 >Go to `$lib/components/textarea/components/Textarea.svelte` to see the component. TypeScript files are used in `$lib/components/textarea`. The props of the component are as follows: 
 > | Prop | Description | Example |
@@ -51,6 +52,7 @@
 > | `cap` | Adds a cap to how many characters can be put, and will display the amounts of characters typed so far. the `maxlength` attribute is not recommended unless you want to add a cap without displaying the amount of characters.| `Name`|
 > 
 > Note that other HTML `textarea` attributes (such as `required` and `disabled`) are also props, and these props can override defaults.
+> Note the component needs access to `$lib/components/utils.ts`.
 
 ## How to (server)
 ### Protected Page 
