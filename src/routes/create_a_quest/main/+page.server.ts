@@ -1,6 +1,7 @@
 // +page.server.ts
 import type { Actions } from './$types';
 import { redirect } from '@sveltejs/kit';
+<<<<<<< HEAD
 import { connect_to_db } from '$lib/server/db';
 import { error } from "@sveltejs/kit";
 import { get_user_id } from '$lib/server/utils';
@@ -8,6 +9,23 @@ export const actions: Actions = {
 	default: async ({ request, cookies }) => {
 		const mongoose = await connect_to_db();
 		if (!mongoose || !mongoose.connection.db) throw error(500, "Database connection failed");
+=======
+
+//CONNECTION STRING FOUND, BUT WE HAVE TO CONFIRM THE CONNECTION... 
+const client = new MongoClient(SECRET_MONGODB_URI);
+let isClientConnected = false;
+
+//COOKIES TO GET EMAIL
+export const load: PageServerLoad = async ({ cookies }) => {
+
+    //CONFIRMING CONNECTION...
+	if (!isClientConnected) {
+		await client.connect();
+		isClientConnected = true;
+	}
+
+	const db = client.db();
+>>>>>>> 958ec43e8a89d9e91fc995d90f6f2ab6f8421020
 
 
 		const email = cookies.get("email");
