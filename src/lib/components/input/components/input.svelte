@@ -1,7 +1,7 @@
 <script lang="ts">
 
     // --- Logic ---
-    import { cn } from '@lib/components/utils';
+    import { cn } from '$lib/components/utils';
     import type { Props } from ".."
     
     let {

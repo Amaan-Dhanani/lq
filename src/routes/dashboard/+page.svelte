@@ -2,9 +2,9 @@
 	import { enhance } from '$app/forms';
 	import type { PageData } from './$types';
 	import '$lib/css/app.css';
-	import { Input } from '@lib/components';
+	import { Input } from '$lib/components';
 	export let data: PageData;
-	import Navigation from '@lib/components/navigation/Navigation.svelte';
+	import Navigation from '$lib/components/navigation/Navigation.svelte';
 </script>
 
 <!-- Full screen container -->

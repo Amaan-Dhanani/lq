@@ -1,5 +1,5 @@
 <script lang="ts"> 
-	import { cn } from '@lib/components/utils';
+	import { cn } from '$lib/components/utils';
 	import type { Props } from "..";
 
 	let {

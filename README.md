@@ -66,3 +66,6 @@
 >   event.url.pathname.startsWith("/create_a_quest");
 > ```
 > Add any additional protected routes here by including more conditions with `||`.
+
+
+# NOTE TO SELF, TALK ABOUT `tempquest_pass` and `get_user_id`!

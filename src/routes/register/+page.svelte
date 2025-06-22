@@ -2,7 +2,7 @@
 	import { enhance } from '$app/forms';
 	import type { ActionData } from './$types';
 	import '$lib/css/app.css';
-	import { Input } from '@lib/components';
+	import { Input } from '$lib/components';
 	export let form: ActionData;
 </script>
 

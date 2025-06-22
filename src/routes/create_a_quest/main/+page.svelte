@@ -2,9 +2,9 @@
 	import { enhance } from '$app/forms';
 	import type { ActionData } from './$types';
 	import '$lib/css/app.css';
-	import { Input } from '@lib/components';
+	import { Input } from '$lib/components';
 	export let form: ActionData;
-	import { CategorySelect } from '@lib/components';
+	import { CategorySelect } from '$lib/components';
 	let selected = 'IceQuest Platformer';
 	let selected2 = 'Public';
 </script>
