@@ -3,7 +3,7 @@ import { MongoClient } from 'mongodb';
 import { SECRET_MONGODB_URI } from '$env/static/private';
 import { redirect } from '@sveltejs/kit';
 
-//CONNECTION STRING FOUND, BUT WE HAVE TO CONFIRM THE CONNECTION...
+//CONNECTION STRING FOUND, BUT WE HAVE TO CONFIRM THE CONNECTION... 
 const client = new MongoClient(SECRET_MONGODB_URI);
 let isClientConnected = false;
 
