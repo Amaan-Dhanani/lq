@@ -5,6 +5,26 @@ import { ObjectId } from "mongodb";
 import { redirect } from '@sveltejs/kit';
 
 
+export async function return_tempquest_data(email: string): Promise<any> {
+	const mongoose = await connect_to_db();
+	if (!mongoose || !mongoose.connection.db) throw error(500, "Database connection failed");
+
+	const _idStr = await get_user_id(email);
+	if (!_idStr) throw error(404, "User ID not found");
+
+	const _id = new ObjectId(_idStr);
+	const collection = mongoose.connection.db.collection("tempquest");
+
+	const doc = await collection.findOne({ _id });
+	if (!doc) { return ""};
+
+	return {
+		...doc,
+		_id: doc._id.toString(),
+	};
+}
+
+
 export async function wrong_question_access(email: string, page_num: number): Promise<void> {
 	const mongoose = await connect_to_db();
 	if (!mongoose || !mongoose.connection.db) throw error(500, "Database connection failed");

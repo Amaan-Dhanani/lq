@@ -5,7 +5,7 @@
 	import Input from '$lib/components/input/components/input.svelte';
 	export let form: ActionData;
 	export let data: PageData;
-	import Navigation from '$lib/components/navigation/Navigation.svelte';
+	import { Navigation } from '$lib/components';
 </script>
 
 <!-- Full screen background -->

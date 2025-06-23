@@ -3,10 +3,13 @@
 	import type { ActionData } from './$types';
 	import '$lib/css/app.css';
 	import { Input } from '$lib/components';
-	export let form: ActionData;
+	export let data;
+	const { tempquest } = data;
 	import { CategorySelect } from '$lib/components';
-	let selected = 'IceQuest Platformer';
-	let selected2 = 'Public';
+	let selected = tempquest.quest_type || 'IceQuest Platformer';
+	let selected2 = tempquest.access || 'Public';
+
+
 </script>
 
 <!-- Full screen container -->
@@ -44,7 +47,7 @@
 		</div>
 		<div class="gap-0">
 			<h2 class="mt-[10px] mb-[5px] text-[16px] dark:text-white">Quest Title</h2>
-			<Input type="text" id="quest_title" name="quest_title" required />
+			<Input type="text" id="quest_title" name="quest_title" value={tempquest?.quest_title} required />
 		</div>
 		<div class="gap-0">
 			<h2 class="mt-[5px] mb-[5px] text-[16px] dark:text-white">Access</h2>
