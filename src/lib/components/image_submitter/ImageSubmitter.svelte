@@ -47,5 +47,5 @@
   {name}
   placeholder={inputPlaceholder}
   value={dataURI}
-  disabled
+  readonly
 />

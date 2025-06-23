@@ -5,7 +5,6 @@
 		if (overlay) overlay.remove();
 	}
 	import "$lib/css/app.css";
-	import Nav from "$lib/components/Nav.svelte";
 	export let data;
 	export let form;
 	import IceQuest_Logo from "$lib/images/IceQuest logo.png";

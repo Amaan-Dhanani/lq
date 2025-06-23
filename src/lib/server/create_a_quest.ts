@@ -70,7 +70,7 @@ export async function tempquest_pass(email: string, info: Record<string, any>): 
 	let questionNumber = 0;
 	if (updatedDoc) {
 		for (let i = 1; i <= 10; i++) {
-			if (`question${i}` in updatedDoc) {
+			if (`question_${i}` in updatedDoc) {
 				questionNumber = i;
 				break;
 			}
