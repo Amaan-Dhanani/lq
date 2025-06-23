@@ -2,7 +2,7 @@
 	import { enhance } from '$app/forms';
 	import type { ActionData } from './$types';
 	import '$lib/css/app.css';
-	import { Input } from '$lib/components';
+	import ImageSubmitter from "$lib/components/image_submitter/ImageSubmitter.svelte";
 	export let form: ActionData;
 	import { CategorySelect } from '$lib/components';
 	let selected = 'IceQuest Platformer';
@@ -75,9 +75,11 @@
 				id="description_1"
 				name="description_1"
 				cap={1850}
-				rows="3"
+				rows=3
 				placeholder="Optionally explain the reasoning behind the correct answer or provide extra context. Max length - 1850 chars."
 			/>
+			<h2 class="mb-[5px] text-[16px] dark:text-white">Image Attachment (optional)</h2>
+			<ImageSubmitter name="image_1" id="image_1"/>
 
 		<div class="gap-0">
 			<h2 class="mt-[5px] mb-[5px] text-[16px] dark:text-white">Correct Answer</h2>
