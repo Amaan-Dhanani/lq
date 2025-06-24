@@ -10,29 +10,37 @@
 	let mode$: Writable<'dark' | 'light' | string> = global_mode$.mode$;
 
 	onMount(() => {
-		const body = document.body;
-
 		mode$.subscribe((v) => {
 			localStorage.theme = v;
 			document.documentElement.classList.toggle('dark', v === 'dark');
-
-			// Reset old background classes (optional safety step)
-			body.classList.remove("bg-[#F0F0F2]", "dark:bg-[#1F1F39]");
-
-			// Apply background color to the body
-			if (pageName === "/register" || pageName === "/login" || pageName === "/account") {
-				body.classList.add("bg-[#F0F0F2]", "dark:bg-[#1F1F39]");
-			}
 		});
 	});
 </script>
 
 
+{#if pageName === "/register" || pageName === "/login" || pageName === "/account"}
+  <div class="w-full h-full -z-10000 bg-[#F0F0F2] dark:bg-[#1F1F39]">
+    <main class="size-full">
+      <slot />
+      <LightDark />
+    </main>
+  </div>
+{:else if pageName === "/dashboard"}
+  <div class="w-full h-full -z-10000 bg-[#3D5CFF]">
+    <main class="size-full">
+      <slot />
+      <LightDark />
+    </main>
+  </div>
+{:else if pageName.startsWith("/create_a_quest")}
+  <div class="w-full h-full -z-10000 bg-[#4c4c61] dark:bg-[#1F1F39]">
+    <main class="size-full">
+      <slot />
+      <LightDark />
+    </main>
+  </div>
+{/if}
 
-<main class="size-full">
-	<slot />
-	<LightDark/>
-</main>
 
 <style>
 	main {

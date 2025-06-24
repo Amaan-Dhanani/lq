@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 
 	export let text = '';
 	export let paths = '';
@@ -13,7 +12,7 @@
 {#if center == 'true'}
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
-	<div on:click={() => goto(link)} class="flex h-[118px] w-[100px] flex-col items-center justify-center rounded-t-[50%] bg-[#ccc] dark:bg-[#3E3E55]">
+	<div on:click={() => location.replace(link)} class="flex h-[118px] w-[100px] flex-col items-center justify-center rounded-t-[50%] bg-[#ccc] dark:bg-[#3E3E55]">
 		<!-- SVG Icon -->
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +33,7 @@
 {:else}
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
-<div on:click={() => goto(link)} class="flex h-[95px] flex-col items-center justify-center">
+<div on:click={() => location.replace(link)} class="flex h-[95px] flex-col items-center justify-center">
 	<!-- SVG Icon -->
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
