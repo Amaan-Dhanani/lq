@@ -4,9 +4,10 @@
 	import '$lib/css/app.css';
 	import ImageSubmitter from "$lib/components/image_submitter/ImageSubmitter.svelte";
 	export let form: ActionData;
+	export let data;
+	const { tempquest } = data;
 	import { CategorySelect } from '$lib/components';
-	let selected = 'IceQuest Platformer';
-	let selected2 = 'Public';
+	let selected2 = tempquest.correctanswer_1 || 'A';
 	import { Textarea } from '$lib/components';
 </script>
 
@@ -36,6 +37,7 @@
 				required
 				cap={1850}
 				class="mb-[10px]"
+				value={tempquest?.question_1}
 				placeholder="Enter question here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Answer Choice A</h2>
@@ -44,6 +46,7 @@
 				name="answerchoicea_1"
 				required
 				cap={1850}
+				value={tempquest?.answerchoicea_1}
 				placeholder="Enter Answer Choice A here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Answer Choice B</h2>
@@ -52,6 +55,7 @@
 				name="answerchoiceb_1"
 				required
 				cap={1850}
+				value={tempquest?.answerchoiceb_1}
 				placeholder="Enter Answer Choice B here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Answer Choice C</h2>
@@ -60,6 +64,7 @@
 				name="answerchoicec_1"
 				required
 				cap={1850}
+				value={tempquest?.answerchoicec_1}
 				placeholder="Enter Answer Choice C here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Answer Choice D</h2>
@@ -68,6 +73,7 @@
 				name="answerchoiced_1"
 				required
 				cap={1850}
+				value={tempquest?.answerchoiced_1}
 				placeholder="Enter Answer Choice D here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Description (optional)</h2>
@@ -76,10 +82,11 @@
 				name="description_1"
 				cap={1850}
 				rows=3
+				value={tempquest?.description_1}
 				placeholder="Optionally explain the reasoning behind the correct answer or provide extra context. Max length - 1850 chars."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Image Attachment (optional)</h2>
-			<ImageSubmitter name="image_1" id="image_1"/>
+			<ImageSubmitter name="image_1" id="image_1" dataURI={tempquest?.image_1}/>
 
 		<div class="gap-0">
 			<h2 class="mt-[5px] mb-[5px] text-[16px] dark:text-white">Correct Answer</h2>

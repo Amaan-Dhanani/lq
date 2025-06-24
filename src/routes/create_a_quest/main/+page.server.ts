@@ -6,7 +6,6 @@ export const load: PageServerLoad = async ({ url, cookies }) => {
   const pageName = Number(url.pathname.slice(-1)) || -9;
   const email = cookies.get("email");
   if (!email) throw error(400, "Missing email cookie");
-  console.log(pageName);
   if (pageName != -9) {
 	await wrong_question_access(email, pageName);
   }
