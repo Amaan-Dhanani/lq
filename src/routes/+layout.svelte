@@ -3,11 +3,10 @@
 	import { onMount } from 'svelte';
 	import { LightDark } from '$lib/components';
 	import { global_mode$ } from '$lib/components/darklight/mode';
-	import { type Writable } from 'svelte/store';
 
 	let pageName = page.url.pathname;
 
-	let mode$: Writable<'dark' | 'light' | string> = global_mode$.mode$;
+	let mode$ = global_mode$.mode$;
 
 	onMount(() => {
 		mode$.subscribe((v) => {
