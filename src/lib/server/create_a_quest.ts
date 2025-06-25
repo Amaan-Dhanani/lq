@@ -16,7 +16,7 @@ export async function return_tempquest_data(email: string): Promise<any> {
 	const collection = mongoose.connection.db.collection("tempquest");
 
 	const doc = await collection.findOne({ _id });
-	if (!doc) { return ""};
+	if (!doc) { return "" };
 
 	return {
 		...doc,
@@ -43,7 +43,7 @@ export async function wrong_question_access(email: string, page_num: number): Pr
 	if (page_num >= storedQuestion + 2) {
 		throw redirect(303, `/create_a_quest/question${storedQuestion + 1}`);
 	}
-	
+
 
 }
 
@@ -69,7 +69,7 @@ export async function tempquest_pass(email: string, info: Record<string, any>): 
 
 	let questionNumber = 0;
 	if (updatedDoc) {
-		for (let i = 1; i <= 10; i++) {
+		for (let i = 10; i >= 1; i--) {
 			if (`question_${i}` in updatedDoc) {
 				questionNumber = i;
 				break;
