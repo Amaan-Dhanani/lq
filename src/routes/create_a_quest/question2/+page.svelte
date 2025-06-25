@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import type { ActionData } from './$types';
 	import '$lib/css/app.css';
-	import { Input } from '$lib/components';
-	export let form: ActionData;
+	import ImageSubmitter from "$lib/components/image_submitter/ImageSubmitter.svelte";
+	export let data;
+	const { tempquest } = data;
 	import { CategorySelect } from '$lib/components';
-	let selected = 'IceQuest Platformer';
-	let selected2 = 'Public';
+	let selected2 = tempquest.correctanswer_2 || 'A';
 	import { Textarea } from '$lib/components';
 </script>
 
@@ -28,61 +27,69 @@
 		use:enhance
 		class="box-border flex flex-grow flex-col rounded-t-2xl bg-white px-6 py-8 dark:bg-[#2F2F42]"
 	>
-		<h1 class="mb-[5px] text-center text-[18px] dark:text-white mb-4">Question 1</h1>
+		<h1 class="mb-[5px] text-center text-[18px] dark:text-white mb-4">Question 2</h1>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Question</h2>
 			<Textarea
-				id="question_1"
-				name="question_1"
+				id="question_2"
+				name="question_2"
 				required
 				cap={1850}
 				class="mb-[10px]"
+				value={tempquest?.question_2}
 				placeholder="Enter question here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Answer Choice A</h2>
 			<Textarea
-				id="answerchoicea_1"
-				name="answerchoicea_1"
+				id="answerchoicea_2"
+				name="answerchoicea_2"
 				required
 				cap={1850}
+				value={tempquest?.answerchoicea_2}
 				placeholder="Enter Answer Choice A here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Answer Choice B</h2>
 			<Textarea
-				id="answerchoiceb_1"
-				name="answerchoiceb_1"
+				id="answerchoiceb_2"
+				name="answerchoiceb_2"
 				required
 				cap={1850}
+				value={tempquest?.answerchoiceb_2}
 				placeholder="Enter Answer Choice B here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Answer Choice C</h2>
 			<Textarea
-				id="answerchoicec_1"
-				name="answerchoicec_1"
+				id="answerchoicec_2"
+				name="answerchoicec_2"
 				required
 				cap={1850}
+				value={tempquest?.answerchoicec_2}
 				placeholder="Enter Answer Choice C here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Answer Choice D</h2>
 			<Textarea
-				id="answerchoiced_1"
-				name="answerchoiced_1"
+				id="answerchoiced_2"
+				name="answerchoiced_2"
 				required
 				cap={1850}
+				value={tempquest?.answerchoiced_2}
 				placeholder="Enter Answer Choice D here. Maximum length 1850 characters."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Description (optional)</h2>
 			<Textarea
-				id="description_1"
-				name="description_1"
+				id="description_2"
+				name="description_2"
 				cap={1850}
-				rows="3"
+				rows={3}
+				value={tempquest?.description_2}
 				placeholder="Optionally explain the reasoning behind the correct answer or provide extra context. Max length - 1850 chars."
 			/>
+			<h2 class="mb-[5px] text-[16px] dark:text-white">Image Attachment (optional)</h2>
+			<ImageSubmitter name="image_2" id="image_2" dataURI={tempquest?.image_2}/>
 
 		<div class="gap-0">
-			<h2 class="mt-[5px] mb-[5px] text-[16px] dark:text-white">Correct Answer</h2>
+			<h2 class="mt-[10px] mb-[5px] text-[16px] dark:text-white">Correct Answer</h2>
 				<CategorySelect
-					name="correctanswer_1"
+					name="correctanswer_2"
 					bind:selected={selected2}
 					options={[
 						{ label: 'A', value: 'A' },
