@@ -83,3 +83,38 @@ export async function tempquest_pass(email: string, info: Record<string, any>): 
 		{ $set: { question: questionNumber } }
 	);
 }
+
+
+export async function submit(email: string): Promise<void> {
+	const mongoose = await connect_to_db();
+	if (!mongoose || !mongoose.connection.db) throw error(500, "Database connection failed");
+
+	const _idStr = await get_user_id(email);
+	if (!_idStr) throw error(404, "User ID not found");
+
+	const _id = new ObjectId(_idStr);
+	const db = mongoose.connection.db;
+
+	const tempCollection = db.collection('tempquest');
+	const questsCollection = db.collection('quests');
+
+	// Get the document from tempquest
+	const tempDoc = await tempCollection.findOne({ _id });
+	if (!tempDoc) throw error(404, "Temporary document not found");
+
+	// Remove the original _id so MongoDB generates a new one
+	const { _id: _, ...docData } = tempDoc;
+
+	// Add the user ID to the new document
+	const newQuest = { ...docData, userid: _idStr };
+
+	// Insert into quests collection
+	const insertResult = await questsCollection.insertOne(newQuest);
+
+	// Delete the original tempquest document
+	await tempCollection.deleteOne({ _id });
+
+	// Log the _id of the new document
+
+
+}

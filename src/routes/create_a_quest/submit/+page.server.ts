@@ -1,6 +1,6 @@
 import type { PageServerLoad, Actions } from './$types';
 import { redirect, error } from '@sveltejs/kit';
-import { tempquest_pass, wrong_question_access, return_tempquest_data } from '$lib/server/create_a_quest';
+import { submit, wrong_question_access, return_tempquest_data } from '$lib/server/create_a_quest';
 
 export const load: PageServerLoad = async ({ url, cookies }) => {
   const pageName = Number(url.pathname.slice(-1)) || -9;
@@ -14,7 +14,6 @@ export const load: PageServerLoad = async ({ url, cookies }) => {
   return { tempquest: tempquest}
 };
 
-
 export const actions: Actions = {
     default: async ({ request, cookies }) => {
         const email = cookies.get("email");
@@ -22,12 +21,11 @@ export const actions: Actions = {
         const formData = await request.formData();
 
         //CHANGE
-        const info = Object.fromEntries(formData) as { question_8: string; answerchoicea_8: string; answerchoiceb_8: string; answerchoicec_8: string; answerchoiced_8: string; explanation_8: string; image_8: string;};
+        const info = Object.fromEntries(formData) as { fake: string; };
         //CHANGE
 
 
-        await tempquest_pass(email, info);
+        await submit(email);
         
-        throw redirect(303, '/create_a_quest/quest_storage');
     }
 };

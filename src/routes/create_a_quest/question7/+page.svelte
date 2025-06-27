@@ -74,13 +74,13 @@
 				value={tempquest?.answerchoiced_7}
 				placeholder="Enter Answer Choice D here. Maximum length 1850 characters."
 			/>
-			<h2 class="mb-[5px] text-[16px] dark:text-white">Description (optional)</h2>
+			<h2 class="mb-[5px] text-[16px] dark:text-white">Explanation (optional)</h2>
 			<Textarea
-				id="description_7"
-				name="description_7"
+				id="explanation_7"
+				name="explanation_7"
 				cap={1850}
 				rows={3}
-				value={tempquest?.description_7}
+				value={tempquest?.explanation_7}
 				placeholder="Optionally explain the reasoning behind the correct answer or provide extra context. Max length - 1850 chars."
 			/>
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Image Attachment (optional)</h2>

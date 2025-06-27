@@ -22,7 +22,7 @@ export const actions: Actions = {
         const formData = await request.formData();
 
         //CHANGE
-        const info = Object.fromEntries(formData) as { question_2: string; answerchoicea_2: string; answerchoiceb_2: string; answerchoicec_2: string; answerchoiced_2: string; description_2: string; image_2: string;};
+        const info = Object.fromEntries(formData) as { question_2: string; answerchoicea_2: string; answerchoiceb_2: string; answerchoicec_2: string; answerchoiced_2: string; explanation_2: string; image_2: string;};
         //CHANGE
 
 
