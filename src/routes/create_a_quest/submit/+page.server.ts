@@ -1,16 +1,17 @@
 import type { PageServerLoad, Actions } from './$types';
 import { redirect, error } from '@sveltejs/kit';
 import { submit, wrong_question_access, return_tempquest_data } from '$lib/server/create_a_quest';
-
 export const load: PageServerLoad = async ({ url, cookies }) => {
-  const pageName = Number(url.pathname.slice(-1)) || -9;
   const email = cookies.get("email");
   if (!email) throw error(400, "Missing email cookie");
-  if (pageName != -9) {
-    await wrong_question_access(email, pageName);
-  }
 
   const tempquest = await return_tempquest_data(email);
+
+  if (tempquest.question === 0) {
+    throw redirect(303, '/create_a_quest/quest_storage');
+  }
+
+  //get tempquest.question --- if doesn't exist go to '/create_a_quest/main' and if 0 go to '/create_a_quest/quest_storage'
   return { tempquest: tempquest}
 };
 
@@ -25,7 +26,9 @@ export const actions: Actions = {
         //CHANGE
 
 
-        await submit(email);
+        const questID = await submit(email);
+        console.log(questID);
+        return {questID: questID, info: info}
         
     }
 };

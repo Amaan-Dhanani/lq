@@ -85,7 +85,7 @@ export async function tempquest_pass(email: string, info: Record<string, any>): 
 }
 
 
-export async function submit(email: string): Promise<void> {
+export async function submit(email: string): Promise<string> {
 	const mongoose = await connect_to_db();
 	if (!mongoose || !mongoose.connection.db) throw error(500, "Database connection failed");
 
@@ -114,7 +114,6 @@ export async function submit(email: string): Promise<void> {
 	// Delete the original tempquest document
 	await tempCollection.deleteOne({ _id });
 
-	// Log the _id of the new document
-
-
+	// Return the _id of the new document
+	return insertResult.insertedId.toString();
 }
