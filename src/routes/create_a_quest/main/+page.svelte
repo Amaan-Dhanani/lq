@@ -4,7 +4,7 @@
 	import { Input } from '$lib/components';
 	export let data;
 	const { tempquest } = data;
-	import { CategorySelect } from '$lib/components';
+	import { RadioHorizontal } from '$lib/components';
 	let selected = tempquest.quest_type || 'IceQuest Platformer';
 	let selected2 = tempquest.access || 'Public';
 
@@ -32,7 +32,7 @@
 		<h1 class="mb-[5px] text-center text-[18px] dark:text-white">Quest Classification</h1>
 		<div class="gap-0">
 			<h2 class="mb-[5px] text-[16px] dark:text-white">Categories</h2>
-			<CategorySelect
+			<RadioHorizontal
 				name="quest_type"
 				bind:selected
 				options={[
@@ -51,7 +51,7 @@
 		<div class="gap-0">
 			<h2 class="mt-[5px] mb-[5px] text-[16px] dark:text-white">Access</h2>
 			<div class="flex flex-row ml-[20px]">
-				<CategorySelect
+				<RadioHorizontal
 					name="access"
 					bind:selected={selected2}
 					options={[

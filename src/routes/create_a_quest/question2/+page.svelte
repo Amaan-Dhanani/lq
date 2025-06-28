@@ -4,7 +4,7 @@
 	import ImageSubmitter from "$lib/components/image_submitter/ImageSubmitter.svelte";
 	export let data;
 	const { tempquest } = data;
-	import { CategorySelect } from '$lib/components';
+	import { RadioHorizontal } from '$lib/components';
 	let selected2 = tempquest.correctanswer_2 || 'A';
 	import { Textarea } from '$lib/components';
 </script>
@@ -88,7 +88,7 @@
 
 		<div class="gap-0">
 			<h2 class="mt-[10px] mb-[5px] text-[16px] dark:text-white">Correct Answer</h2>
-				<CategorySelect
+				<RadioHorizontal
 					name="correctanswer_2"
 					bind:selected={selected2}
 					options={[

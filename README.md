@@ -28,10 +28,10 @@
 >|`link` | URL path the user will navigate to upon clicking the icon. | `/dashboard` |
 
 ### Radio Horizontal/Category Select
->Go to `$lib/components/category_select/components/CategorySelect.svelte` to see the component. TypeScript files are used in `$lib/components/category_select`. 
+>Go to `$lib/components/radio_horizontal/components/RadioHorizontal.svelte` to see the component. TypeScript files are used in `$lib/components/radio_horizontal`. 
 >It is kind of hard to explain the props of this components, so I have a code sample:
 > ```html
-> <CategorySelect
+> <RadioHorizontal
 > 	name="access"
 > 	bind:selected={selected2}
 > 	options={[
