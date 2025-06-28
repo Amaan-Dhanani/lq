@@ -7,6 +7,7 @@
 	import { RadioHorizontal } from '$lib/components';
 	let selected = tempquest.quest_type || 'IceQuest Platformer';
 	let selected2 = tempquest.access || 'Public';
+	import { goto } from '$app/navigation';
 
 
 </script>
@@ -64,6 +65,12 @@
 		<!-- Submit Button -->
 		<button class="h-12 w-full rounded-xl bg-[#3d5cff] text-center text-white hover:cursor-pointer mt-[20px]">
 			Continue Quest Creation
+		</button>
+		<button
+			class="h-12 mb-[10px] mt-[20px] rounded-xl bg-red-600 text-white transition hover:bg-red-700"
+			aria-label="back" on:click={() => goto('/dashboard')}
+		>
+			Back
 		</button>
 	</form>
 </div>

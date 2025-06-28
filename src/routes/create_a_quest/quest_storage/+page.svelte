@@ -18,7 +18,7 @@
 		amount of questions that can be submitted. You have options to
 		{#if tempquest?.question != '10'}
 			go to the next question,
-		{/if} access previous questions, return to the home page, or submit what you have.
+		{/if} access other questions, return to the home page, or submit what you have.
 	</p>
 	<!-- Form Section -->
 	<div
@@ -33,6 +33,9 @@
 	</div>
 		<div class="gap-0 dark:text-white">
 			<h2 class="mt-[0px] mb-[5px] text-[16px] underline">Quest Classification</h2>
+			{#if !tempquest.quest_title}
+				<div><script>location.replace('/create_a_quest/main')</script></div>
+			{/if}
 			<p class="text-[14px] ml-[30px]">
 				<span class="font-bold">Quest Title:&nbsp;&nbsp;</span>{tempquest?.quest_title}
 			</p>

@@ -7,6 +7,7 @@
 	import { RadioHorizontal } from '$lib/components';
 	let selected2 = tempquest.correctanswer_8 || 'A';
 	import { Textarea } from '$lib/components';
+	import { goto } from '$app/navigation';
 </script>
 
 <!-- Full screen container -->
@@ -106,6 +107,12 @@
 			class="mt-[20px] h-12 w-full rounded-xl bg-[#3d5cff] text-center text-white hover:cursor-pointer"
 		>
 			Continue Quest Creation
+		</button>
+		<button
+			class="h-12 mb-[10px] mt-[20px] rounded-xl bg-red-600 text-white transition hover:bg-red-700"
+			aria-label="back" on:click={() => goto('/create_a_quest/quest_storage')}
+		>
+			Back
 		</button>
 	</form>
 </div>
