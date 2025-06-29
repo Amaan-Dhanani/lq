@@ -70,7 +70,7 @@
 			</div>
 			{:else}
 			<h2 class="mt-0 text-[16px] dark:text-white">
-				Great Job! This is your ID that you can use to share your quest to other people!
+				Great Job! This is your ID that you can use to to other people so they can join your class!
 				<div class="flex flex-row items-end gap-4 rounded-t-xl bg-white p-6 pb-0 dark:bg-[#2F2F42]">
 					<div class="flex-1">
 						<Input

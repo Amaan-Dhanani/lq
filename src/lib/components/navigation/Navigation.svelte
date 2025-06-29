@@ -12,11 +12,11 @@
 	<div class="flex h-[118px] w-full flex-row items-end justify-around">
 		<div class="absolute -z-100 h-[95px] w-full rounded-t-[30px] bg-[#ccc] dark:bg-[#3E3E55]"></div>
 		<!-- START AREAS TO CHANGE -->
-		<Icon text="Play" viewbox="0 0 512 512" paths={paths1} fill="lightcoral"/>
-		<Icon text="Create" stroke="#5865F2" viewbox="0 0 21 21" paths={paths2} fill="lightcoral"/>
-		<Icon text="Home" center="true" viewbox="0 0 24 24" paths={paths3} fill="lightcoral"/>
+		<Icon text="Play" viewbox="0 0 512 512" paths={paths1} fill="#c026d3"/>
+		<Icon text="Create" stroke="#5865F2" viewbox="0 0 21 21" paths={paths2} fill="#c026d3"/>
+		<Icon text="Home" center="true" viewbox="0 0 24 24" paths={paths3} fill="#c026d3"/>
 		<Icon text="Discord" viewbox="0 0 24 24" paths={paths4} fill="#5865F2"/>
-		<Icon text="Settings" viewbox="0 0 24 24" paths={paths5} fill="lightcoral" link="/account"/>
+		<Icon text="Settings" viewbox="0 0 24 24" paths={paths5} fill="#c026d3" link="/account"/>
 		<!-- END AREAS TO CHANGE -->
 	</div>
 </div>

@@ -13,14 +13,14 @@
 		<div class="absolute -z-100 h-[95px] w-full rounded-t-[30px] bg-[#ccc] dark:bg-[#3E3E55]"></div>
 		<!-- START AREAS TO CHANGE -->
 		{#if number || number!=0}
-		<Icon text="Navigate" viewbox="0 0 28 24" paths={paths1} fill="lightcoral" link="/create/navigate"/>
+		<Icon text="Navigate" viewbox="0 0 28 24" paths={paths1} fill="#c026d3" link="/create/navigate"/>
 		{/if}
-		<Icon text="Home" link="/dashboard" viewbox="0 0 48 48" paths={paths2} fill="lightcoral"/>
+		<Icon text="Home" link="/dashboard" viewbox="0 0 48 48" paths={paths2} fill="#c026d3"/>
 		{#if number || number!=0}
-		<Icon text="Submit" viewbox="0 0 24 24" link="/create/submit" paths={paths3} fill="lightcoral"/>
+		<Icon text="Submit" viewbox="0 0 24 24" link="/create/submit" paths={paths3} fill="#c026d3"/>
 		{/if}
 		{#if number!=10}
-		<Icon text="Question {number + 1}" viewbox="0 0 15 15" paths={paths4} link="/create/question{number +1}" fill="lightcoral"/>
+		<Icon text="Question {number + 1}" viewbox="0 0 15 15" paths={paths4} link="/create/question{number +1}" fill="#c026d3"/>
 		{/if}
 		<!-- END AREAS TO CHANGE -->
 	</div>
