@@ -3,7 +3,7 @@ import { error } from "@sveltejs/kit";
 import { get_user_id } from "./utils";
 import { ObjectId } from "mongodb";
 import { redirect } from '@sveltejs/kit';
-
+import randomstring from "randomstring"
 
 export async function return_tempquest_data(email: string): Promise<any> {
 	const mongoose = await connect_to_db();
@@ -105,10 +105,16 @@ export async function submit(email: string): Promise<string> {
 	// Remove the original _id so MongoDB generates a new one
 	const { _id: _, ...docData } = tempDoc;
 
+	const gen_id = randomstring.generate({
+		length: 6,
+		charset: "ABC"
+	})
+
 	// Add created_at and user ID to the new document
 	const newQuest = {
 		...docData,
 		userid: _idStr,
+		id: gen_id,
 		created_at: new Date()
 	};
 
