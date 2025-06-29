@@ -1,4 +1,8 @@
 <script lang="ts">
+
+  // Global CSS Import
+  import '../app.css';
+
 	import { page } from '$app/state';
 	import { onMount } from 'svelte';
 	import { LightDark } from '$lib/components';
