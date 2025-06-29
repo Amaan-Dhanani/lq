@@ -57,13 +57,14 @@
 					>
 						Create a Class
 					</button>
-					<button
-			class="h-12 mb-[10px] mt-[20px] rounded-xl bg-red-600 text-white transition hover:bg-red-700"
+					
+				</form>
+				<button
+			class="h-12 w-full mb-[10px] mt-[20px] rounded-xl bg-red-600 text-white transition hover:bg-red-700"
 			aria-label="back" on:click={() => goto('/dashboard')}
 		>
 			Back
 		</button>
-				</form>
 
 				<hr class="dark:border-white" />
 			</div>

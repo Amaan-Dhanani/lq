@@ -105,8 +105,12 @@ export async function submit(email: string): Promise<string> {
 	// Remove the original _id so MongoDB generates a new one
 	const { _id: _, ...docData } = tempDoc;
 
-	// Add the user ID to the new document
-	const newQuest = { ...docData, userid: _idStr };
+	// Add created_at and user ID to the new document
+	const newQuest = {
+		...docData,
+		userid: _idStr,
+		created_at: new Date()
+	};
 
 	// Insert into quests collection
 	const insertResult = await questsCollection.insertOne(newQuest);
