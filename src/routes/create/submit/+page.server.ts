@@ -24,7 +24,6 @@ export const actions: Actions = {
         const info = Object.fromEntries(formData) as { fake: string; };
         //CHANGE
 
-
         const questID = await submit(email);
         console.log(questID);
         return {questID: questID, info: info}

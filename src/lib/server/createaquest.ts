@@ -118,6 +118,8 @@ export async function submit(email: string): Promise<string> {
 	// Delete the original tempquest document
 	await tempCollection.deleteOne({ _id });
 
+	///find a collection called acheivements and find a document with the id, if it doesn't exist make one and add quest_created=1. if it does exist find quest_created and +1 to it. if quest_createdd doesn't exist, make it =1
+
 	// Return the _id of the new document
 	return insertResult.insertedId.toString();
 }
