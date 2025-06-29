@@ -6,7 +6,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 	const is_protected =
 		event.url.pathname.startsWith("/dashboard") ||
 		event.url.pathname.startsWith("/account") ||
-		event.url.pathname.startsWith("/create_a_quest") ;
+		event.url.pathname.startsWith("/create") ;
 
 	const auth = authenticate(event.cookies);
 

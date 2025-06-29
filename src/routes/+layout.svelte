@@ -31,7 +31,7 @@
       <LightDark />
     </main>
   </div>
-{:else if pageName.startsWith("/create_a_quest")}
+{:else if pageName.startsWith("/create")}
   <div class="w-full h-full -z-10000 bg-[#4c4c61] dark:bg-[#1F1F39]">
     <main class="size-full">
       <slot />

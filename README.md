@@ -63,7 +63,7 @@
 > const is_protected =
 >   event.url.pathname.startsWith("/dashboard") ||
 >   event.url.pathname.startsWith("/account") ||
->   event.url.pathname.startsWith("/create_a_quest");
+>   event.url.pathname.startsWith("/create");
 > ```
 > Add any additional protected routes here by including more conditions with `||`.
 

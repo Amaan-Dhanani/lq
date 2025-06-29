@@ -9,17 +9,17 @@
 	export let visibleCount: number = 10; // number of buttons to display
 
 	const allOptions = [
-		{ value: 'Main', link: '/create_a_quest/main' },
-		{ value: 'Question 1', link: '/create_a_quest/question1' },
-		{ value: 'Question 2', link: '/create_a_quest/question2' },
-		{ value: 'Question 3', link: '/create_a_quest/question3' },
-		{ value: 'Question 4', link: '/create_a_quest/question4' },
-		{ value: 'Question 5', link: '/create_a_quest/question5' },
-		{ value: 'Question 6', link: '/create_a_quest/question6' },
-		{ value: 'Question 7', link: '/create_a_quest/question7' },
-		{ value: 'Question 8', link: '/create_a_quest/question8' },
-		{ value: 'Question 9', link: '/create_a_quest/question9' },
-		{ value: 'Question 10', link: '/create_a_quest/question10' },
+		{ value: 'Main', link: '/create/main' },
+		{ value: 'Question 1', link: '/create/question1' },
+		{ value: 'Question 2', link: '/create/question2' },
+		{ value: 'Question 3', link: '/create/question3' },
+		{ value: 'Question 4', link: '/create/question4' },
+		{ value: 'Question 5', link: '/create/question5' },
+		{ value: 'Question 6', link: '/create/question6' },
+		{ value: 'Question 7', link: '/create/question7' },
+		{ value: 'Question 8', link: '/create/question8' },
+		{ value: 'Question 9', link: '/create/question9' },
+		{ value: 'Question 10', link: '/create/question10' },
 	];
 
 	const baseClass =
