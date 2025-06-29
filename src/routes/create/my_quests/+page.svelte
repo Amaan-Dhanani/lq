@@ -15,6 +15,9 @@
           class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
         >
           <div class="text-xl font-semibold">{quest.quest_title}</div>
+           <div class="text-gray-500 text-sm mt-1">
+            {quest._id}
+          </div>
           <div class="text-gray-500 text-sm mt-1">
             {new Date(quest.created_at).toLocaleString()}
           </div>
