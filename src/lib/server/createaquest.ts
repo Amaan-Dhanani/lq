@@ -107,8 +107,8 @@ export async function submit(email: string): Promise<string> {
 
 	const gen_id = randomstring.generate({
 		length: 6,
-		charset: "ABC"
-	})
+		charset: "alphabetic"
+	}).toUpperCase()
 
 	// Add created_at and user ID to the new document
 	const newQuest = {
