@@ -1,7 +1,7 @@
 <script lang="ts">
 
   // Global CSS Import
-  import '../app.css';
+  import '$lib/css/app.css';
 
 	import { page } from '$app/state';
 	import { onMount } from 'svelte';
