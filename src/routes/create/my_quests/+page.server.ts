@@ -21,7 +21,7 @@ export const load: PageServerLoad = async ({ cookies }) => {
   // Query using userid field as string (not ObjectId)
   const quests = await questsCollection
     .find({ userid: _idStr })
-    .project({ quest_title: 1, created_at: 1 })
+    .project({ quest_title: 1, created_at: 1, _id: 0})
     .toArray();
 
   return {
