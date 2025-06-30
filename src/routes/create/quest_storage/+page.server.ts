@@ -1,5 +1,5 @@
-import type { PageServerLoad, Actions } from './$types';
-import { redirect, error } from '@sveltejs/kit';
+import type { PageServerLoad } from './$types';
+import { error } from '@sveltejs/kit';
 import { return_tempquest_data } from '$lib/server/createaquest';
 
 export const load: PageServerLoad = async ({ url, cookies }) => {

@@ -22,21 +22,21 @@
 
 
 {#if pageName === "/register" || pageName === "/login" || pageName === "/account"}
-  <div class="w-full h-full -z-10000 bg-[#F0F0F2] dark:bg-[#1F1F39]">
+  <div class="w-full -z-10000 bg-[#F0F0F2] dark:bg-[#1F1F39]">
     <main class="size-full">
       <slot />
       <LightDark />
     </main>
   </div>
 {:else if pageName === "/dashboard"}
-  <div class="w-full h-full -z-10000 bg-[#3D5CFF]">
+  <div class="w-full -z-10000 bg-[#3D5CFF]">
     <main class="size-full">
       <slot />
       <LightDark />
     </main>
   </div>
 {:else if pageName.startsWith("/create")}
-  <div class="w-full h-full -z-10000 bg-[#4c4c61] dark:bg-[#1F1F39]">
+  <div class="w-full -z-10000 bg-[#4c4c61] dark:bg-[#1F1F39]">
     <main class="size-full">
       <slot />
       <LightDark />
@@ -51,3 +51,9 @@
 		margin-inline: auto;
 	}
 </style>
+
+
+<div>
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/06/29/22/20250629224018-MY8I7PZ5.js"></script>
+</div>

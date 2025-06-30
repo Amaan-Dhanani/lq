@@ -37,11 +37,11 @@ export async function wrong_question_access(email: string, page_num: number): Pr
 
 	const doc = await collection.findOne({ _id });
 	if (!doc) {
-		throw redirect(303, `/create_a_quest/main`);
+		throw redirect(303, `/create/main`);
 	};
 	const storedQuestion = doc.question;
 	if (page_num >= storedQuestion + 2) {
-		throw redirect(303, `/create_a_quest/question${storedQuestion + 1}`);
+		throw redirect(303, `/create/question${storedQuestion + 1}`);
 	}
 
 
@@ -85,7 +85,7 @@ export async function tempquest_pass(email: string, info: Record<string, any>): 
 }
 
 
-export async function submit(email: string): Promise<string> {
+export async function submit(email: string): Promise<{ gen_id: string }> {
 	const mongoose = await connect_to_db();
 	if (!mongoose || !mongoose.connection.db) throw error(500, "Database connection failed");
 
@@ -97,6 +97,7 @@ export async function submit(email: string): Promise<string> {
 
 	const tempCollection = db.collection('tempquest');
 	const questsCollection = db.collection('quests');
+	const achievementsCollection = db.collection('achievements');
 
 	// Get the document from tempquest
 	const tempDoc = await tempCollection.findOne({ _id });
@@ -108,7 +109,7 @@ export async function submit(email: string): Promise<string> {
 	const gen_id = randomstring.generate({
 		length: 6,
 		charset: "alphabetic"
-	}).toUpperCase()
+	}).toUpperCase();
 
 	// Add created_at and user ID to the new document
 	const newQuest = {
@@ -124,8 +125,18 @@ export async function submit(email: string): Promise<string> {
 	// Delete the original tempquest document
 	await tempCollection.deleteOne({ _id });
 
-	///find a collection called acheivements and find a document with the id, if it doesn't exist make one and add quest_created=1. if it does exist find quest_created and +1 to it. if quest_createdd doesn't exist, make it =1
+	// Update achievements collection
+	const updateResult = await achievementsCollection.updateOne(
+		{ userid: _idStr },
+		{
+			$inc: { quest_created: 1 },
+			$setOnInsert: { created_at: new Date() }
+		},
+		{ upsert: true }
+	);
 
-	// Return the _id of the new document
-	return insertResult.insertedId.toString();
+	// Return both mongo ID and gen_id
+	return {
+		gen_id
+	};
 }

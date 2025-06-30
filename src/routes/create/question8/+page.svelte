@@ -8,7 +8,7 @@
 	let selected2 = tempquest.correctanswer_8 || 'A';
 	import { Textarea } from '$lib/components';
 	import { goto } from '$app/navigation';
-	import Refresh from '$lib/components/Refresh.svelte';
+	import { Refresh } from '$lib/components';
 </script>
 
 <!-- Full screen container -->

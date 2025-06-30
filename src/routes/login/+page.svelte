@@ -15,7 +15,7 @@
 	<!-- Header -->
 	<h1 class="text-[32px] pt-[86px] font-bold ml-[5px] mb-0 dark:text-white">Sign In</h1>
 	<p class="mt-0 ml-[5px] mb-[10px] text-[12px] text-[#B8B8D2]">
-		Welcome back to LearnQuest!
+		Welcome back to QuestOwl!
 	</p>
 
 	<!-- Form Section -->

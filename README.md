@@ -1,4 +1,4 @@
-# LearnQuest 
+# QuestOwl 
  
 ## Sources
 >**MongoDB Altas + SvelteKit + TailwindCSS**

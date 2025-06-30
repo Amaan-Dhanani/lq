@@ -4,7 +4,7 @@
 	import '$lib/css/app.css';
 	export let data;
 	const { tempquest } = data;
-	import Refresh from '$lib/components/Refresh.svelte';
+	import { Refresh } from '$lib/components';
 </script>
 
 <!-- Full screen container -->

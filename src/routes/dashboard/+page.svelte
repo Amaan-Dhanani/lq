@@ -14,7 +14,7 @@
 <div class="mr-[1rem] ml-[1rem] flex min-h-screen flex-col bg-[#3D5CFF]">
 	<!-- Header -->
 <h1 class="mb-0 ml-[5px] pt-[86px] text-[32px] font-bold text-white">Hi, {data.name.split(' ')[0]}</h1>
-		<p class="mt-0 mb-[10px] ml-[5px] text-[14px] text-white">Welcome back to LearnQuest!</p>
+		<p class="mt-0 mb-[10px] ml-[5px] text-[14px] text-white">Welcome back to QuestOwl!</p>
 	<!-- Form Section -->
 	<div
 		class="mb-[95px] box-border flex flex-grow flex-col gap-4 rounded-t-2xl bg-white px-6 py-8 dark:bg-[#2F2F42]"

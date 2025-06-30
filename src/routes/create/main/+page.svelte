@@ -8,7 +8,7 @@
 	let selected = tempquest.quest_type || 'IceQuest Platformer';
 	let selected2 = tempquest.access || 'Public';
 	import { goto } from '$app/navigation';
-	import Refresh from '$lib/components/Refresh.svelte';
+	import { Refresh } from '$lib/components';
 
 </script>
 

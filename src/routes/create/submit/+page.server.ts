@@ -25,8 +25,7 @@ export const actions: Actions = {
         //CHANGE
 
         const questID = await submit(email);
-        console.log(questID);
-        return {questID: questID, info: info}
+        throw redirect(302, '/dashboard');
         
     }
 };

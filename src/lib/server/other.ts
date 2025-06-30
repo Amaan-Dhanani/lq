@@ -29,3 +29,21 @@ export async function new_class(email: string): Promise<string> {
 
 	return result.insertedId.toString();
 }
+
+
+export async function lvl_redirect(email: string, page_num: number): Promise<void> {
+	const mongoose = await connect_to_db();
+	if (!mongoose || !mongoose.connection.db) throw error(500, "Database connection failed");
+
+	const _idStr = await get_user_id(email);
+	if (!_idStr) throw error(404, "User ID not found");
+
+	const _id = new ObjectId(_idStr);
+	const collection = mongoose.connection.db.collection('achievements');
+
+	await collection.updateOne(
+		{ _id },
+		{ $set: { level: page_num } },
+		{ upsert: true }
+	);
+}
