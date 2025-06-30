@@ -47,3 +47,22 @@ export async function lvl_redirect(email: string, page_num: number): Promise<voi
 		{ upsert: true }
 	);
 }
+
+export async function get_lvl(email: string): Promise<number> {
+  const mongoose = await connect_to_db();
+  if (!mongoose || !mongoose.connection.db) throw error(500, "Database connection failed");
+
+  const _idStr = await get_user_id(email);
+  if (!_idStr) throw error(404, "User ID not found");
+
+  const _id = new ObjectId(_idStr);
+  const collection = mongoose.connection.db.collection('achievements');
+
+  const doc = await collection.findOne({ _id });
+  if (!doc) throw error(404, "User achievements not found");
+
+  // Assuming 'level' field exists and is a number
+  if (typeof doc.level !== 'number') throw error(500, "Level data invalid or missing");
+
+  return doc.level;
+}

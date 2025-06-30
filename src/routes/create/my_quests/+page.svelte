@@ -1,83 +1,72 @@
 <script lang="ts">
 	import '$lib/css/app.css';
-	import { onMount } from 'svelte';
 	import { writable } from 'svelte/store';
-  import QuestionPreview from '$lib/components/QuestionPreview.svelte';
+
+	type Quest = { quest_title: string; created_at: string; id: string };
+	type TempQuest = { [key: string]: string };
 
 	export let data: {
-		quests: { quest_title: string; created_at: string; id: string }[];
+		quests: Quest[];
+		tempquest: TempQuest;
 	};
 
-	const showModal = writable(false);
-	const selectedQuest = writable<null | { quest_title: string; created_at: string; id: string }>(
-		null
-	);
+	const { tempquest } = data;
 
-	function openModal(quest: { quest_title: string; created_at: string; id: string } | null) {
+	const selectedQuest = writable<Quest | null>(null);
+
+	function openQuest(quest: Quest) {
 		selectedQuest.set(quest);
-		showModal.set(true);
 	}
 
-	function closeModal() {
-		showModal.set(false);
+	function goBack() {
 		selectedQuest.set(null);
 	}
 </script>
 
 <div class="mx-auto max-w-3xl p-6">
-	<h1 class="mb-6 text-4xl font-bold text-indigo-700">Your Quests</h1>
+	{#if $selectedQuest}
+		<!-- Clear page and show QuestionPreview list for selected quest -->
+		<button
+			on:click={goBack}
+			class="mb-4 rounded bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+		>
+			← Back to Quests
+		</button>
 
-	{#if data.quests.length > 0}
-		<ul class="space-y-4">
-			{#each data.quests as quest}
-				<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-				<!-- svelte-ignore a11y_click_events_have_key_events -->
-				<li
-					class="cursor-pointer rounded-lg bg-white p-5 shadow-md transition-shadow duration-300 hover:shadow-lg"
-					on:click={() => openModal(quest)}
-				>
-					<div class="text-xl font-semibold">{quest.quest_title}</div>
-					<div class="mt-1 text-sm text-gray-500">{quest.id}</div>
-					<div class="mt-1 text-sm text-gray-500">
-						{new Date(quest.created_at).toLocaleString()}
-					</div>
-				</li>
-			{/each}
-		</ul>
+		<h2 class="mb-4 text-2xl font-bold text-indigo-700">Quest: {$selectedQuest.quest_title}</h2>
+		<!---get everything from tempquest and put it in line by line-->
 	{:else}
-		<p class="text-center text-gray-600">No quests found.</p>
-	{/if}
-</div>
+		<!-- Show list of quests -->
+		<h1 class="mb-6 text-4xl font-bold text-indigo-700">Your Quests</h1>
 
-<!-- Modal -->
-{#if $showModal}
-	<div class="bg-opacity-40 fixed inset-0 z-50 flex items-center justify-center bg-black">
-		<div class="relative w-full max-w-md rounded-lg bg-white p-6 shadow-lg">
-			<button
-				on:click={closeModal}
-				class="absolute top-2 right-2 text-xl font-bold text-gray-400 hover:text-gray-600"
-			>
-				&times;
-			</button>
-
-			{#if $selectedQuest}
-				<h2 class="mb-4 text-2xl font-bold text-indigo-700">Quest Details</h2>
-				{#each Array.from({ length: 10 }, (_, i) => i + 1) as number}
-					{#if tempquest[`question_${number}`]}
-						<QuestionPreview
-							{number}
-							image={tempquest[`image_${number}`]}
-							correctanswer={tempquest[`correctanswer_${number}`]}
-							explanation={tempquest[`explanation_${number}`]}
-							answerchoicea={tempquest[`answerchoicea_${number}`]}
-							answerchoiceb={tempquest[`answerchoiceb_${number}`]}
-							answerchoicec={tempquest[`answerchoicec_${number}`]}
-							answerchoiced={tempquest[`answerchoiced_${number}`]}
-							question={tempquest[`question_${number}`]}
-						/>
-					{/if}
+		{#if data.quests.length > 0}
+			<ul class="space-y-4">
+				{#each data.quests as quest}
+					<!-- svelte-ignore a11y_no_noninteractive_element_to_interactive_role -->
+					<li
+						role="button"
+						tabindex="0"
+						class="cursor-pointer rounded-lg bg-white p-5 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+						on:click={() => openQuest(quest)}
+						on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && openQuest(quest)}
+					>
+						<div class="text-xl font-semibold">{quest.quest_title}</div>
+						<div class="mt-1 text-sm text-gray-500">{quest.id}</div>
+						<div class="mt-1 text-sm text-gray-500">
+							{new Date(quest.created_at).toLocaleString()}
+						</div>
+					</li>
 				{/each}
-			{/if}
-		</div>
-	</div>
-{/if}
+			</ul>
+		{:else}
+			<p class="text-center text-gray-600">No quests found.</p>
+		{/if}
+	{/if}
+	<button
+				class="mt-[20px] w-full mb-[10px] h-12 rounded-xl bg-red-600 text-white transition hover:bg-red-700"
+				aria-label="back"
+				on:click={() => goto('/dashboard')}
+			>
+				Back
+			</button>
+</div>

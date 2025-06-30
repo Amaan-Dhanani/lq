@@ -1,6 +1,6 @@
 
 <button
-	class="fixed top-3 p-3 rounded-full bg-blue-700 hover:bg-blue-900 text-gray-300 shadow-lg transition-colors"
+	class="fixed left-22 p-3 rounded-full bg-blue-700 hover:bg-blue-900 text-gray-300 shadow-lg transition-colors"
 	on:click={() => location.reload()}
 	aria-label="Refresh"
 >

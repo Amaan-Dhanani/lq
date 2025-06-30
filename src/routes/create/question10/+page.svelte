@@ -9,6 +9,7 @@
 	import { Textarea } from '$lib/components';
 	import { goto } from '$app/navigation';
 	import { Refresh } from '$lib/components';
+	import { Logo } from '$lib/components';
 </script>
 
 <!-- Full screen container -->
@@ -17,7 +18,8 @@
 ></div>
 <div class="mr-[1rem] ml-[1rem] flex min-h-screen flex-col bg-[#4c4c61] dark:bg-[#1F1F39]">
 	<!-- Header -->
-	<Refresh/>
+	 <Logo/>
+	
 	<h1 class="mb-0 ml-[5px] pt-[86px] text-[32px] font-bold text-white">Create a Quest</h1>
 	<p class="mt-0 mb-[10px] ml-[5px] text-[12px] text-[#B8B8D2]">
 		Unknown subheading

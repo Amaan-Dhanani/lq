@@ -6,6 +6,7 @@
 	import type { PageData } from '../$types';
 	export let form: ActionData;
 	export let data: PageData;
+	import { Logo } from '$lib/components';
 </script>
 
 <!-- Full screen container -->
@@ -13,6 +14,7 @@
 <div class="flex flex-col min-h-screen bg-[#F0F0F2] dark:bg-[#1F1F39] ml-[1rem] mr-[1rem]">
 
 	<!-- Header -->
+	 <Logo/>
 	<h1 class="text-[32px] pt-[86px] font-bold ml-[5px] mb-0 dark:text-white">Sign In</h1>
 	<p class="mt-0 ml-[5px] mb-[10px] text-[12px] text-[#B8B8D2]">
 		Welcome back to QuestOwl!

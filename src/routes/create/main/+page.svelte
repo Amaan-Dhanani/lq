@@ -9,6 +9,7 @@
 	let selected2 = tempquest.access || 'Public';
 	import { goto } from '$app/navigation';
 	import { Refresh } from '$lib/components';
+	import { Logo } from '$lib/components';
 
 </script>
 
@@ -18,7 +19,8 @@
 ></div>
 <div class="mr-[1rem] ml-[1rem] flex min-h-screen flex-col bg-[#4c4c61] dark:bg-[#1F1F39]">
 	<!-- Header -->
-	 <Refresh/>
+	 <Logo/>
+	 
 	<h1 class="mb-0 ml-[5px] pt-[86px] text-[32px] font-bold text-white">Create a Quest</h1>
 	<p class="mt-0 mb-[10px] ml-[5px] text-[12px] text-[#B8B8D2]">
 		Unknown subheading
@@ -39,10 +41,6 @@
 				bind:selected
 				options={[
 					{ label: 'IceQuest Platformer', value: 'IceQuest Platformer' },
-					{ label: '1-----', value: '1-----' },
-					{ label: '2-----', value: '2-----' },
-					{ label: '3-----', value: '3-----' },
-					{ label: '4-----', value: '4-----' }
 				]}
 			/>
 		</div>

@@ -19,7 +19,7 @@ export const actions: Actions = {
 		if (error) {
 			return fail(400, { user, error });
 		} else {
-			throw redirect(303, "/loading/registrationsuccessful");
+			throw redirect(303, "/login");
 		}
 	}
 };

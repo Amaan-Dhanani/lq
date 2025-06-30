@@ -1,6 +1,6 @@
 import type { PageServerLoad, Actions } from './$types';
 import { redirect, error } from '@sveltejs/kit';
-import { lvl_redirect } from '$lib/server/other';
+import { lvl_redirect } from '$lib/server/class_and_levels';
 
 export const actions: Actions = {
     default: async ({ request, url, cookies }) => {

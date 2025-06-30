@@ -4,6 +4,7 @@
 	import '$lib/css/app.css';
 	import { goto } from '$app/navigation';
 	export let form;
+	import { Logo } from '$lib/components';
 	let submit = false;
 	let id_input: HTMLInputElement;
 
@@ -25,6 +26,7 @@
 ></div>
 <div class="mr-[1rem] ml-[1rem] flex min-h-screen flex-col bg-[#4c4c61] dark:bg-[#1F1F39]">
 	<!-- Header -->
+	 <Logo/>
 	<h1 class="mb-0 ml-[5px] pt-[86px] text-[32px] font-bold text-white">Create a Class</h1>
 	<p class="mt-0 mb-[10px] ml-[5px] text-[12px] text-[#B8B8D2]"></p>
 	<!-- Form Section -->
@@ -34,14 +36,14 @@
 		{#if submit == false}
 			<div class="gap-0 dark:text-white">
 				<h2 class="mt-0 text-[16px]">
-					Change heading
+					Alright! All you have to do is press that button!
 				</h2>
 				<form
 					method="POST"
 					autocomplete="off"
 					use:enhance
 					on:submit|preventDefault={() => (submit = true)}
-					class="box-border flex flex-grow flex-col rounded-t-2xl bg-white px-6 py-8 dark:bg-[#2F2F42]"
+					class="box-border flex flex-grow flex-col rounded-t-2xl bg-white px-6 dark:bg-[#2F2F42]"
 				>
 					<Input
 						id="fake"
@@ -49,7 +51,7 @@
 						value="Random Value"
 						readonly
 						required
-						class="invisible h-[0px]"
+						class="invisible h-[0px] p-0 readonly"
 					/>
 					<button
 						type="submit"

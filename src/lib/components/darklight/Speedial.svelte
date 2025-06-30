@@ -7,7 +7,7 @@
 
 <!-- Dark/Light Toggle Button -->
 <button
-	class="fixed right-10 bottom-10 p-3 rounded-full bg-primary-800 hover:bg-primary-700 text-gray-300 shadow-lg transition-colors"
+	class="fixed left-37 p-3 rounded-full bg-blue-700 hover:bg-blue-900 text-gray-300 shadow-lg transition-colors"
 	on:click={() => global_mode$.toggle()}
 	aria-label="Toggle Dark Mode"
 >

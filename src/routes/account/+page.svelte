@@ -6,6 +6,7 @@
 	export let form: ActionData;
 	export let data: PageData;
 	import { Navigation } from '$lib/components';
+	import { Logo } from '$lib/components';
 </script>
 
 <!-- Full screen background -->
@@ -16,6 +17,7 @@
 <!-- Page Container -->
 <div class="mx-4 flex min-h-screen flex-col bg-[#F0F0F2] dark:bg-[#1F1F39]">
 	<!-- Header -->
+	 <Logo/>
 	<h1 class="pt-[86px] text-[32px] font-bold dark:text-white">Settings</h1>
 	<p class="mb-4 text-sm text-[#B8B8D2]">Subheading unknown</p>
 

@@ -1,6 +1,6 @@
 import type { Actions } from './$types';
 import { error } from '@sveltejs/kit';
-import { new_class } from '$lib/server/other';
+import { new_class } from '$lib/server/class_and_levels';
 
 export const actions: Actions = {
     default: async ({ request, cookies }) => {

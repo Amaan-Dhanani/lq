@@ -1,11 +1,8 @@
 <script lang="ts">
-	import { Input } from '$lib/components';
-	import { enhance } from '$app/forms';
 	import '$lib/css/app.css';
-	import { goto } from '$app/navigation';
 	export let data;
-	export let form;
 	let { tempquest } = data;
+	import { Logo } from '$lib/components';
 </script>
 
 <!-- Full screen container -->
@@ -14,6 +11,7 @@
 ></div>
 <div class="mr-[1rem] ml-[1rem] flex min-h-screen flex-col bg-[#4c4c61] dark:bg-[#1F1F39]">
 	<!-- Header -->
+	 <Logo/>
 	<h1 class="mb-0 ml-[5px] pt-[86px] text-[32px] font-bold text-white">Create a Quest</h1>
 	<p class="mt-0 mb-[10px] ml-[5px] text-[12px] text-[#B8B8D2]"></p>
 	<!-- Form Section -->
@@ -40,7 +38,9 @@
 					{/if}
 					Clicking "Submit Quest" will finalize your submission.
 				</h2>
-
+					<button class="h-12 w-full rounded-xl bg-[#3d5cff] text-center text-white hover:cursor-pointer mt-[20px]">
+			Submit
+		</button><br><br>
 				<hr class="dark:border-white" />
 			</div>
 	</div>

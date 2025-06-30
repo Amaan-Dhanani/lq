@@ -1,5 +1,5 @@
 <script lang="ts">
-	import QuestionPreview from '$lib/components/QuestionPreview.svelte';
+	import { QuestionPreview } from '$lib/components';
 	import Navigation2 from '$lib/components/navigation/Navigation2.svelte';
 	import '$lib/css/app.css';
 	export let data;
@@ -13,7 +13,7 @@
 ></div>
 <div class="mr-[1rem] ml-[1rem] flex min-h-screen flex-col bg-[#4c4c61] dark:bg-[#1F1F39]">
 	<!-- Header -->
-	 <Refresh/>
+	 
 	<h1 class="mb-0 ml-[5px] pt-[86px] text-[32px] font-bold text-white">Create a Quest</h1>
 	<p class="mt-0 mb-[10px] ml-[5px] text-[12px] text-[#B8B8D2]">
 		Great job on finishing a section of the form! Just remember that 10 Questions is the maximum

@@ -4,6 +4,8 @@ export { default as LightDark } from './darklight/Speedial.svelte';
 export { default as Textarea } from './textarea/components/Textarea.svelte';
 export { default as Navigation } from './navigation/Navigation.svelte';
 export { default as Navigation2 } from './navigation/Navigation2.svelte';
-export { default as QuestionPreview } from './QuestionPreview.svelte';
-export { default as Refresh } from './Refresh.svelte';
-export { default as FullScreenBlocker } from './FullScreenBlocker.svelte'
+export { default as QuestionPreview } from './question_preview/QuestionPreview.svelte';
+export { default as Refresh } from './refresh/Refresh.svelte';
+export { default as ImageSubmitter} from './image_submitter/ImageSubmitter.svelte';
+export { default as LvlBox } from "./lvl_box/LvlBox.svelte";
+export { default as Logo } from "./logo/Logo.svelte";
